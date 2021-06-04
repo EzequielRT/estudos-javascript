@@ -1,8 +1,14 @@
-document.querySelector('.texto').offsetHeight; // Considera todo o conteudo visivel
-document.querySelector('.texto').offsetWidth; // Considera todo o conteudo visivel
+document.querySelector('.texto').scrollTop // Verifica a posicao do scroll vertical
+document.querySelector('.texto').scrollLeft // Verifica a posicao do scroll horizontal
+document.querySelector('.texto').scrollTo(0, 0) // Seta a posicao do scroll na horizontal e vertical
 
-document.querySelector('.texto').clientHeight; // Considera apenas o conteudo e o padding
-document.querySelector('.texto').clientWidth; // Considera apenas o conteudo e o padding
+window.scrollY // Verifica a posicao do scroll do navegador vertical
+window.scrollX // Verifica a posicao do scroll do navegador horizontal
+window.scrollTo(0, 0) // Seta a posicao do scroll do navegador na horizontal e vertical
 
-document.querySelector('.texto').scrollHeight; // Considera todo o conteudo
-document.querySelector('.texto').scrollWidth; // Considera todo o conteudo 
+function subirTela() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
