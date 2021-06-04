@@ -1,14 +1,20 @@
-document.querySelector('.texto').scrollTop // Verifica a posicao do scroll vertical
-document.querySelector('.texto').scrollLeft // Verifica a posicao do scroll horizontal
-document.querySelector('.texto').scrollTo(0, 0) // Seta a posicao do scroll na horizontal e vertical
-
-window.scrollY // Verifica a posicao do scroll do navegador vertical
-window.scrollX // Verifica a posicao do scroll do navegador horizontal
-window.scrollTo(0, 0) // Seta a posicao do scroll do navegador na horizontal e vertical
-
 function subirTela() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
+
+function decidirBotaoScroll() {
+    if (window.scrollY === 0) {
+        // oculta botao
+        document.querySelector('.scroll-button').style.display = 'none';
+    } else {
+        // mostra botao
+        document.querySelector('.scroll-button').style.display = 'block';
+    }
+}
+
+//setInterval(decidirBotaoScroll, 500); // verifica posicao do scroll a cada meio segundo
+
+window.addEventListener('scroll', decidirBotaoScroll); // monitora o scroll
