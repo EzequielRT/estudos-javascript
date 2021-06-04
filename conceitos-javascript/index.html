@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <h1 id="titulo">Seja bem vindo(a)</h1>
+    <h1 id="titulo"
+    onclick="console.log('Clicou')"
+    onmouseover="console.log('Passou o mouse')" 
+    onmouseout="console.log('Tirou o mouse')">Seja bem vindo(a)</h1>
 
     <input id="campo" type="text" name="usuario" value="Nome do usuário">
-
-    <button onclick="clicou(); document.getElementById('titulo').innerHTML = 'Obrigado!'; this.innerHTML = 'Clicou!';">Clique em mim</button>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
