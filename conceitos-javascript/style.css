@@ -1,0 +1,27 @@
+body {
+    background-color: #EEE;
+}
+.azul {
+    background-color: #00F;
+    color: #FFF;
+}
+.vermelho {
+    background-color: #F00;
+    color: #FFF;
+}
+.verde {
+    background-color: #0F0;
+    color: #000;
+}
+#telefone {
+    display: none;
+}
+#texto {
+    width: 400px;
+    border: 1px solid #000;
+    padding: 10px;
+    font-family: arial;
+}
+#mostrar {
+    display: none;
+}
