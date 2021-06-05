@@ -1,14 +1,19 @@
-let carros = [
+let carros = [ // array
     'Palio', 
     'Uno', 
     'Corolla', 
     'Ferrari'
 ];
 
-let ingredientes = [
-    ['uva', 'pera', 'maça'],
-    ['arroz', 'macarrão']
-]
+let carro = { // objeto
+    marca:'Fiat',
+    modelo:'Uno',
+    peso:'800kg',
+    ligar:function() {
+        console.log("VRUM VRUM");
+    }
+};
 
-console.log(ingredientes[0][2]);
-console.log(ingredientes[1][1]);
+console.log(carro['marca']);
+console.log(carro.modelo);
+carro.ligar();
