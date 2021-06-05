@@ -1,37 +1,39 @@
-let carros = [ // array
-    'Palio', 
-    'Uno', 
-    'Corolla', 
-    'Ferrari'
-];
+let dia = 7;
+let diaNome = null;
+let fimDeSemana = null;
 
-let carro = { // objeto
-    marca:'Fiat',
-    modelo:'Uno',
-    peso:'800kg',
-    ligado:false,
-    ligar:function() {
-        this.ligado = true;
-        console.log("Ligando o "+this.modelo);
-        console.log("VRUM VRUM");
-    },
-    acelerar:function() {
-        if (this.ligado == true) {
-        console.log("Riihhhhh");
-        } else {
-            console.log(this.marca+" "+this.modelo+" não está ligado!");
-        }
-    }
-};
+switch (dia) {
+    case 1:
+        diaNome = "segunda-feira";
+        break;
+    case 2:
+        diaNome = "terça-feira";
+        break;
+    case 3:
+        diaNome = "quarta-feira";
+        break;
+    case 4:
+        diaNome = "quinta-feira";
+        break;
+    case 5:
+        diaNome = "sexta-feira";
+        break;
+    case 6:
+        diaNome = "sábado";
+        break;
+    case 7:
+        diaNome = "domingo";
+        break;
+}
 
-console.log(carro.modelo);
-carro.acelerar();
+switch (dia) {
+    case 6:
+    case 7:
+        fimDeSemana = "fim de semana.";
+        break;
+    default:
+        fimDeSemana = "dia de semana.";
+}
 
-let motos = [
-    {marca:'Honda', modelo:'cg 150'},
-    {marca:'Yamaha', modelo:'Crosser 150'},
-    {marca:'BMW', modelo:'GS 1200'}
-];
 
-console.log(motos[2].modelo);
-console.log(motos[1].modelo);
+document.getElementById('dia').innerHTML = "Hoje é "+diaNome+", "+fimDeSemana;
