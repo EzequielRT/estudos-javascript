@@ -1,10 +1,15 @@
-let html = '';
+let nome = 'Ezequiel Rodrigues Trindade';
 
-let c = 0;
+let resultado1 = nome.length;
+let resultado2 = nome.indexOf('Rodrigues');
 
-while (c < 10) {
-    html += "Número: " + c + "<br>";
-    c++;
+let resultado3 = '';
+if (nome.indexOf('T') > -1) {
+    resultado3 = 'Achou!';
+}else {
+    resultado3 = 'Não achou!';
 }
 
-document.getElementById('demo').innerHTML = html;
+console.log(resultado1);
+console.log(resultado2);
+console.log(resultado3);
