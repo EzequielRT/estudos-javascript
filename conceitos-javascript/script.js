@@ -1,19 +1,10 @@
-/*let texto = ''; // FOR LOOP
+let html = '';
 
-for (let i = 0; i < 50; i++) {
-    texto = texto + i + '<br>';
+let c = 0;
+
+while (c < 10) {
+    html += "Número: " + c + "<br>";
+    c++;
 }
-document.getElementById('demo').innerHTML = texto;*/
-
-
-let carros = [ 'Ferrari', 'Fusca', 'Palio', 'Corolla']; // FOR LOOP ARRAY
-
-let html = '<ul>';
-
-for (let i in carros) {
-    html = html + '<li>' + carros[i] + '</li>';
-}
-
-html += '</ul>';
 
 document.getElementById('demo').innerHTML = html;
