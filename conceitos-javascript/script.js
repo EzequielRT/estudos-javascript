@@ -1,3 +1,5 @@
-let nome = 'Ezequiel Rodrigues Trindade';
-let resultado = nome.split(' '); // Remove os espacos da string
-console.log(resultado);
+let n = 10;
+
+let res = n.toString(); // Transformando numero em string
+
+console.log(res);
