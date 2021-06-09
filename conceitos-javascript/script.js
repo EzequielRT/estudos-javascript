@@ -1,5 +1,5 @@
-let n = '25.597';
+let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
 
-let res = parseFloat(n); // Transformando String em Num Decimal
+let res = lista.join(', '); // Separa os itens do Array de acordo com o parametro
 
 console.log(res);
