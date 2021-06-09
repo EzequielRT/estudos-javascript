@@ -1,14 +1,13 @@
-let lista = [45, 4, 9, 16, 25];
-let lista2 = [];
+let lista = [
+    {id:1, nome:'Ezequiel', sobrenome:'Rodrigues'},
+    {id:2, nome:'Matheus', sobrenome:'Trindade'},
+    {id:3, nome:'Paola', sobrenome:'Drehmer'}
+];
 
-lista2 = lista.find(function (item) {
-    return (item === 16) ? true : false;  // Busca e retorna o item do Array
+let pessoa = lista.find(function (item) {
+    return (item.id === 2)? true : false;  // Buscando objeto atraves do id
 });
 
-lista2 = lista.findIndex(function (item) { // Busca e retorna a posicao do item no Array
-    return (item === 16) ? true : false;
-});
-
-let res = lista2;
+let res = pessoa;
 
 console.log(res);
