@@ -1,3 +1,3 @@
-let nome = 'Ezequiel Rodrigues Trindade';
-let resultado = nome.toLowerCase(); // Transforma todas letras em minusculas
+let nome = 'Ezequiel';
+let resultado = nome.concat(' ', 'Rodrigues Trindade'); // Concatenacao de strings com funcao a CONCAT
 console.log(resultado);
