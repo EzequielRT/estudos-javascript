@@ -1,7 +1,6 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
 
-lista.pop(); // Remove o ultimo item do Array
-lista.shift(); // Remove o primeiro item do Array
+lista.push('Prato'); // Adiciona item ao Array
 
 let res = lista;
 
