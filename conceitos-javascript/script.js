@@ -1,5 +1,5 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
 
-let res = lista.join(', '); // Separa os itens do Array de acordo com o parametro
+let res = lista.indexOf('Farinha'); // Localiza item no Array
 
 console.log(res);
