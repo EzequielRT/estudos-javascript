@@ -1,5 +1,8 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
 
-let res = lista.indexOf('Farinha'); // Localiza item no Array
+lista.pop(); // Remove o ultimo item do Array
+lista.shift(); // Remove o primeiro item do Array
+
+let res = lista;
 
 console.log(res);
