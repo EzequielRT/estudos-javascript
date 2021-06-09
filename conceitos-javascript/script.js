@@ -1,3 +1,3 @@
-let nome = 'Ezequiel';
-let resultado = nome.concat(' ', 'Rodrigues Trindade'); // Concatenacao de strings com funcao a CONCAT
+let nome = '      Ezequiel   ';
+let resultado = nome.trim(); // Remove os espacos da string
 console.log(resultado);
