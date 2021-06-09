@@ -1,3 +1,3 @@
 let nome = 'Ezequiel Rodrigues Trindade';
-let resultado = nome.replace('Rodrigues', 'Moura'); // Substitucao de palavras
+let resultado = nome.toUpperCase(); // Transforma todas letras em MAIUSCULAS
 console.log(resultado);
