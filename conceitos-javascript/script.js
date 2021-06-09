@@ -1,7 +1,6 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+let lista2 = ['Prato', 'Faca', 'Garfo'];
 
-lista.splice(0, 2); // Removendo itens do Array - primeiro parametro é a partir de qual item sera removido e o segundo é a qtd de itens
-
-let res = lista;
+let res = lista.concat(lista2); // Concatenando Arrays
 
 console.log(res);
