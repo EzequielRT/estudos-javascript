@@ -1,7 +1,10 @@
-let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
+let lista = [45, 4, 9, 16, 25];
+let lista2 = [];
 
-lista.reverse(); // Ordenando Array por ordem inversa
+lista2 = lista.map(function (item) { // Multiplicando itens do array com Map
+    return item * 2;
+});
 
-let res = lista;
+let res = lista2;
 
 console.log(res);
