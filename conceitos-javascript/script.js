@@ -1,6 +1,8 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
-let lista2 = ['Prato', 'Faca', 'Garfo'];
 
-let res = lista.concat(lista2); // Concatenando Arrays
+lista.sort(); // Ordenando Array por ordem alfabetica
+lista.reverse(); // Ordenando Array por ordem alfabetica decrescente
+
+let res = lista;
 
 console.log(res);
