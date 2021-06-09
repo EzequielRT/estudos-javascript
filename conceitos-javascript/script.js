@@ -1,5 +1,5 @@
-let n = 10.665151515;
+let n = '25.597';
 
-let res = n.toFixed(2); // Definindo qtd de casas decimais
+let res = parseInt(n); // Transformando String em Num Inteiro
 
 console.log(res);
