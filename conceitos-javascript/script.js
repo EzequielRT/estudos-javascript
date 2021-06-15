@@ -9,13 +9,24 @@ let pessoa = {
             seguidores:1000
         }
     },
-    nomeCompleto: function () {
-        return `${this.nome} ${this.sobrenome}`;
-    },
 };
 
-/*const {nome, idade, social:{instagram}} = pessoa;
-console.log(nome, idade, instagram);*/
+//Retorna nome completo ex1
+/*function pegarNomeCompleto(obj) {
+    return obj.nome+' '+obj.sobrenome;
+}
+console.log(pegarNomeCompleto(pessoa));*/
 
-/*const {nome, idade, social:{instagram:{url:instagram, seguidores}}} = pessoa;
-console.log(nome, idade, instagram, seguidores);*/
+//Retorna nome completo ex1
+/*function pegarNomeCompleto(obj) {
+    let nome = obj.nome;
+    let sobrenome = obj.sobrenome;
+    return `${nome} ${sobrenome}`;
+}
+console.log(pegarNomeCompleto(pessoa));*/
+
+//Desconstruindo no proprio parametro
+function pegarNomeCompleto({nome, sobrenome, social:{instagram:{url}}}) {
+    return `Siga ${nome} ${sobrenome} em (${url})`;
+}
+console.log(pegarNomeCompleto(pessoa));
