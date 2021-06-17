@@ -1,47 +1,33 @@
-// Function 1º metodo
+//Ex 1
+/*let numeros = [1, 2, 3, 4];
+let outros = [...numeros, 5, 6, 7, 8]; // Complementando array
+console.log(outros);*/
 
-/*function somar(x, y) {
-    return x + y;
+//Ex 2
+/*let info = {
+    nome:'Ezequiel',
+    sobrenome:'Rodrigues',
+    idade:99
+};
+console.log(info);
+
+let novaInfo = {
+    ...info,
+    estado:'Eldorado do Sul',
+    cidade:'Porto Alegre',
+    pais:'Brasil'
+};
+console.log(novaInfo);*/
+
+//Ex 3
+function adicionarInfo(info) {
+    let novasInfo = {
+        ...info,
+        status:0,
+        token:'jlsjlksjkjks',
+        data_cadastro:'17/06/2021'
+    };
+    return novasInfo;
 }
-console.log(somar(10, 5));*/
 
-
-
-// Function 2º metodo
-
-/*let somar = function(x, y) {
-    return x + y;
-}
-console.log(somar(10, 5));*/
-
-
-
-// Arrow functions
-
-//Ex 01
-/*let somar = (x, y) => {
-    return x + y;
-}
-console.log(somar(10, 5));*/
-
-
-//Ex 02
-/*let somar = (x, y) => x + y;
-console.log(somar(10, 5));*/
-
-
-//Ex 03
-/*let letrasNome = (nome) => {
-    return nome.length;
-}
-console.log(letrasNome("Ezequiel"));*/
-
-
-//Ex 04
-/*let letrasNome = (nome) => nome.length;
-console.log(letrasNome("Ezequiel"));*/
-
-
-//Ex 05
-let letrasNome = nome => nome.length;
-console.log(letrasNome("Ezequiel"));
+console.log(adicionarInfo({nome:'Ezequiel', sobrenome:'Rodrigues'}));
