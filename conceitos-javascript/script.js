@@ -1,14 +1,15 @@
-let info = ['Ezequiel Rodrigues', 'Rodrigues', 'Trindade', '@ezequiel'];
+
+// Desconstruindo Array Ex 02
+let [nome, sobrenome, idade=20] = ['Ezequiel', 'Rodrigues']; // = Ezequiel Rodrigues 20
+console.log(nome, sobrenome, idade);
 
 
-// Desconstruindo Array Ex 01
+// Criando Array com Function e descontruindo
 
-//let [nomeCompleto, nome, sobrenome, instagram] = info;
-//console.log(nomeCompleto, nome, sobrenome, instagram); // = Ezequiel Rodrigues Rodrigues Trindade @ezequiel
+function criar() {
+    let a = [1,2,3];
+    return a;
+}
 
-
-//let [nomeCompleto, , , instagram] = info;
-//console.log(nomeCompleto, instagram); // Selecionando itens do array Ex: 01 = Ezequiel Rodrigues @ezequiel
-
-let [, nome, sobrenome] = info;
-console.log(nome, sobrenome); // Selecionando itens do array Ex: 02 = Rodrigues Trindade
+let [a,b,c] = criar();
+console.log(a,b,c); // = 1, 2, 3
