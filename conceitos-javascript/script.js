@@ -1,19 +1,11 @@
-/*function adicionar(...numeros) { // Operador Rest
-    console.log(numeros);
-}
-adicionar(5, 6, 7, 8, 9, 10, 11, 12);*/
+let lista = ["ovo", "café", "arroz", "feijão", "macarrao "];
 
-// Exemplo
-function adicionar(nomes, ...novosNomes) {
-    let novoConjunto = [
-        ...nomes,
-        ...novosNomes
-    ]
-    return novoConjunto;
-} 
+// Funcao Includes
+console.log(lista.includes("ovo")); // = true
+console.log(lista.includes("carne")); // = false
 
-let nomes = ["Ezequiel", "Paola"];
+// Funcao Repeat
+console.log('x'.repeat(20)); // Repete 20x o x
 
-let outros = adicionar(nomes, "Antonio", "Maria", "Jose");
-
-console.log(outros);
+let nome = "Ezequiel ";
+console.log(nome.repeat(3)); // Repete 03x a variavel nome
