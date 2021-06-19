@@ -1,11 +1,20 @@
-// CALLBACK
-// Funcao que é executada posteriormente de determinado resultado
+// Promise
+function pegarTemperatura() {
+    return new Promise(function (resolve, reject) {
+        console.log("pegando temperatura...");
 
-function alertar() {
-    console.log('Opa, tudo bem?');
+        setTimeout(function () {
+            resolve("40 na sombra");
+        }, 2000);
+    });
 }
 
-let nome = "Ezequiel";
-setTimeout(alertar, 5000);
-let sobrenome = "Rodrigues";
-console.log(`NOME COMPLETO: ${nome+" "+sobrenome}`);
+
+// Usando a promise
+let temp = pegarTemperatura();
+temp.then(function(resultado) {
+    console.log("Temperatura: "+resultado);
+});
+temp.catch(function(error) {
+    console.log("Eita, deu erro!");
+});
