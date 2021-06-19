@@ -1,5 +1,11 @@
-// Transforma um JSON em uma string
+// CALLBACK
+// Funcao que é executada posteriormente de determinado resultado
 
-let pessoa = JSON.stringify({nome:"Matheus", idade:23, estetica: {altura:1.90, peso:80}});
+function alertar() {
+    console.log('Opa, tudo bem?');
+}
 
-console.log(pessoa);
+let nome = "Ezequiel";
+setTimeout(alertar, 5000);
+let sobrenome = "Rodrigues";
+console.log(`NOME COMPLETO: ${nome+" "+sobrenome}`);
