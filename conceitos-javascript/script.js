@@ -1,13 +1,28 @@
-let telefone = '5546';
+//JSON
 
-console.log(telefone.padEnd(9, '*')); // = 5546*****
-console.log(telefone.padStart(9, '*')); // *****5546
+//EX  01
+let pessoa = {
+    nome:"Ezequiel",
+    idade:90
+};
+console.log(pessoa.nome, pessoa.idade);
 
 
+//EX 02
+let pessoa2 = {
+    nome:"Paola",
+    idade:22,
+    caracteristicas: ["sorridente", "maravilhosa", "top"] // Array de objeto
+};
+console.log(pessoa2.nome, pessoa2.idade, pessoa2.caracteristicas);
 
-// Exemplo
-let cartao = '1234115161564511';
-let lastDigits = cartao.slice(-4); // = 4511
-let cartaoMascarado = lastDigits.padStart(16, '*');
-
-console.log(`Este é seu cartão? ${cartaoMascarado}`);
+//EX 03
+let pessoa3 = {
+    nome:"Matheus",
+    idade:23,
+    estetica: {
+        altura:1.90, // Objeto dentro de objeto
+        peso:80
+    }
+};
+console.log(pessoa3.nome, pessoa3.idade, pessoa3.estetica.altura, pessoa3.estetica.peso);
