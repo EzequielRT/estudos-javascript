@@ -1,18 +1,15 @@
-async function inserirPost() {
-    document.getElementById("posts").innerHTML = "Carregando...";
+async function enviar() {
+    let arquivo = document.getElementById("arquivo").files[0];
 
-    let req = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    let body = new FormData();
+    body.append('title', 'Bla bla bla');
+    body.append('arquivo', arquivo);
+
+    let req = await fetch('https://www.meusite.com.br/upload', {
         method: 'POST',
-        body: JSON.stringify({
-            title: 'Título de teste',
-            body: 'Corpo de teste',
-            userId: 4
-        }),
+        body: body,
         headers: {
-            'Content-type': 'application/json'
+            'content-type': 'multipart/form-data'
         }
     });
-    let json = await req.json();
-
-    console.log(json);
 };
