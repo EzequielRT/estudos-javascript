@@ -1,15 +1,9 @@
-async function enviar() {
-    let arquivo = document.getElementById("arquivo").files[0];
+function mostrar() {
+    let imagem = document.getElementById("imagem").files[0];
 
-    let body = new FormData();
-    body.append('title', 'Bla bla bla');
-    body.append('arquivo', arquivo);
+    let img = document.createElement("img");
+    img.src = URL.createObjectURL(imagem);
+    img.width = 200;
 
-    let req = await fetch('https://www.meusite.com.br/upload', {
-        method: 'POST',
-        body: body,
-        headers: {
-            'content-type': 'multipart/form-data'
-        }
-    });
+    document.getElementById("area").appendChild(img);
 };
