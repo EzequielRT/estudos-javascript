@@ -1,20 +1,13 @@
-// Promise
-function pegarTemperatura() {
-    return new Promise(function (resolve, reject) {
-        console.log("pegando temperatura...");
-
-        setTimeout(function () {
-            resolve("40 na sombra");
-        }, 2000);
-    });
+function Animal() {
+    this.raca = "Cão";
+    this.nome = "Lulu";
+    this.idade = "200";
+    this.peso = "10";
 }
 
+var lulu = new Animal();
+lulu.raca = "Gato";
+lulu.nome = "Lulu";
 
-// Usando a promise
-let temp = pegarTemperatura();
-temp.then(function(resultado) {
-    console.log("Temperatura: "+resultado);
-});
-temp.catch(function(error) {
-    console.log("Eita, deu erro!");
-});
+var xuxu = new Animal();
+xuxu.nome = "Xuxu";
