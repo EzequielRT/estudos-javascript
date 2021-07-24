@@ -1,7 +1,17 @@
-if(typeof localStorage.nome === "undefined") {
-    localStorage.nome = prompt("Qual seu nome?");
+function addEndereco(endereco) {
+    
+    //Desconstruindo objeto
+    const { cidade, estado } = endereco;
+    
+    //Objeto literal
+    const novoEndereco = {
+        cidade,
+        estado,
+        pais:'Brasil'
+    }
+
+    console.log(`${novoEndereco.cidade}, ${novoEndereco.estado}, ${novoEndereco.pais}`);
 }
 
-document.getElementById('info').innerHTML = localStorage.nome; // Guarda os dados no navegador permanentemente
+addEndereco({cidade:'Porto Alegre', estado:'Rio Grande do Sul'});
 
-// sessionStorage -> Guarda os dados até o navegador ser fechado 
