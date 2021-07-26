@@ -1,18 +1,25 @@
-// 1º Exemplo de Requisição Ajax
-fetch('bd.json')
-    .then(resposta => resposta.json()) // 1ª Promisse
-    .then(json => console.log(json)); // 2ª Promisse
+let requisitar1 = ()=>{
 
+    // NÃO espera concluir a requisição para avançar para a próxima etapa dentro do bloco
+    fetch('bd.json')
+        .then(resposta => resposta.json())
+        .then(json => console.log(json)); 
 
-// 2º Exemplo de Requisição Ajax
-const url = 'bd.json';
-const parametros = {
-    method:'GET',
-    body:JSON.stringify({
-        nome:'Ezequiel',
-        idade:20
-    })
-};
-fetch(url, parametros)
-    .then(resposta => resposta.json()) // 1ª Promisse
-    .then(json => console.log(json)); // 2ª Promisse
+        console.log("Alguma coisa..."); // Roda antes do Fetch
+}
+
+// Requisição assíncrona
+async function requisitar2() {
+
+    // Espera a váriável possuir valor para avançar para a próxima etapa dentro do bloco
+    const resposta = await fetch('bd.json'); 
+    const json = await resposta.json(); 
+
+    console.log(json);
+
+    console.log("Alguma coisa..."); // Aguarda o Fetch ser concluído para executar
+
+}
+
+requisitar2();
+console.log("Texto qualquer...")
