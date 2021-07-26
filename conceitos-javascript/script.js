@@ -1,19 +1,18 @@
-let fazer = ()=>{
-    let promise = new Promise((resolve, reject)=>{
+// 1º Exemplo de Requisição Ajax
+fetch('bd.json')
+    .then(resposta => resposta.json()) // 1ª Promisse
+    .then(json => console.log(json)); // 2ª Promisse
 
-        console.log('Aguarde...');
 
-        setTimeout(()=>{
-            resolve('OK')
-        }, 3000);
-
-    });
-
-    return promise;
+// 2º Exemplo de Requisição Ajax
+const url = 'bd.json';
+const parametros = {
+    method:'GET',
+    body:JSON.stringify({
+        nome:'Ezequiel',
+        idade:20
+    })
 };
-
-fazer()
-    .then((resposta)=>{
-        console.clear();
-        console.log(`Resposta: ${resposta}`);
-    });
+fetch(url, parametros)
+    .then(resposta => resposta.json()) // 1ª Promisse
+    .then(json => console.log(json)); // 2ª Promisse
