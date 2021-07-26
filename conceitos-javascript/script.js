@@ -1,17 +1,8 @@
-function addEndereco(endereco) {
-    
-    //Desconstruindo objeto
-    const { cidade, estado } = endereco;
-    
-    //Objeto literal
-    const novoEndereco = {
-        cidade,
-        estado,
-        pais:'Brasil'
-    }
+function setInfo(nome, sobrenome = '', status = false) {
 
-    console.log(`${novoEndereco.cidade}, ${novoEndereco.estado}, ${novoEndereco.pais}`);
+    console.log({nome, sobrenome, status});
+
 }
 
-addEndereco({cidade:'Porto Alegre', estado:'Rio Grande do Sul'});
+setInfo('Ezequiel', 'Rodrigues');
 
