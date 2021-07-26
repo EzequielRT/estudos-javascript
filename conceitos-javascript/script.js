@@ -1,8 +1,7 @@
-function setInfo(nome, sobrenome = '', status = false) {
+import { somar, multiplicar, criador } from './matematica.js'; 
 
-    console.log({nome, sobrenome, status});
+console.log( somar(10, 5) );
 
-}
+console.log( multiplicar(10, 5) );
 
-setInfo('Ezequiel', 'Rodrigues');
-
+console.log( `Criador: ${criador}` );
