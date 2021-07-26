@@ -1,7 +1,12 @@
-import { somar, multiplicar, criador } from './matematica.js'; 
+import { Animal, Gato } from './animal.js';
 
-console.log( somar(10, 5) );
+let gato1 = new Animal('Gato', 4);
+console.log( gato1.falar('Miau') );
+console.log( gato1.dados );
 
-console.log( multiplicar(10, 5) );
 
-console.log( `Criador: ${criador}` );
+let gato2 = new Gato(4, 'Preto');
+console.log( gato2.dados );
+console.log( `Cor: ${gato2.getCor()}` );
+
+
